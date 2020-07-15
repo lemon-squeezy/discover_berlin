@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,12 +9,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <!--Scroll reveal CDN-->
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
-
-    <script src="main.js"></script>
-
+    <link rel="icon" href="assets/images/favicon.ico.png" type="image/x-icon">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("user_er5hxJX0ByESTEwem9LEi");
+    })();
+    </script>
 </head>
-<body onload="initMap()">
+<body>
     <header>
         <div class="container">
             <nav class="nav">
@@ -25,16 +30,16 @@
                 <a href="index.html" class="logo"><img src="assets/images/logo-berlin.png" alt=""></a>
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link">History</a>
+                        <a href="#history" class="nav-link">History</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#menu" class="nav-link">Activities</a>
+                        <a href="activities.html" class="nav-link">Activities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link active">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a href="#footer" class="nav-link">About us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -42,38 +47,48 @@
         </div>
     </header>
     <!-- Header ends -->
-    <section class="hero2" id="hero">
+    <section class="hero3" id="hero">
         <div class="container">
             <h2 class="sub-headline">
-                <span class="first-letter">A</span>ctivities
+                <span class="first-letter">C</span>ontact
             </h2>
-            <h1 class="headline">What to do in Berlin?</h1>
+            <a href="#contact"><h1 class="headline">Let's get in touch!</h1></a>
         </div>
     </section>
-    <!-- Hero ends -->
+    <!-- Contact section -->
+     <!-- Email.js -->
+<!-- <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate the contact number value
+                this.contact_number.value = Math.random() * 100000 | 0;
+                emailjs.sendForm('contact_service', 'contact_form', this);
+            });
+        }
+    </script> -->
 
-    <!-- Map section -->
-    <section class="activities">
-        <h1 class="global-headline headline headline-dark">Find your favourite spot</h1>
-        <div class="container grid">
+    <section class="contact" id="contact">
+            <div class="container">
+            
+                 <form id="contact-form">
 
-             <div class="option" id="club">
-                <img src="assets/images/clubs.jpg" alt="Clubs" class="img-thumbnail"/>
-              </div>
-              <div class="option" id="sport">
-                <img src="assets/images/sport.jpg" alt="Sports" class="img-thumbnail"
-                />
-              </div>
-              <div class="option" id="restaurant">
-                <img src="assets/images/restaurant.jpg" alt="Restaurants" class="img-thumbnail" />
-              </div>
-        </div>
-        <!--The div element for the map -->
-        <div id="map"></div>
+                    <div class="contact-input">
+                        <input type="text" class="input" placeholder="Name" name="user_name" required>
+                    </div>
+                    <div class="contact-input">
+                        <input type="email" class="input" placeholder="E-mail" name="user_email" required>
+                    </div>
+                    <div class="contact-input">
+                        <textarea class="input" cols="30" rows="8" placeholder="Your message..." name="message"></textarea>
+                    </div>
+                        
+                        <input class="send" type="submit" value="Send">
+                </form>
+            </div>
     </section>
     
-   
-    <!-- Culinary delight ends -->
+<!-- Footer -->
     <footer id="footer">
         <div class="container">
             <div class="back-to-top">
@@ -81,10 +96,11 @@
             </div>
             <div class="footer-content">
                 <div class="footer-content-about animate-top">
-                    <h4>About Rosa</h4>
+                    <h4>About Discover Berlin</h4>
                     <div class="asterisk"><i class="fas fa-asterisk"></i></div>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi voluptatum, accusamus quis odio esse quas iste fuga eaque ipsa voluptate nobis, quos recusandae eos minus nostrum inventore quia ipsam in!
+                        
+D.B. was founded in 2017 with the aim of giving English-speaking visitors an insight into the city of Berlin and enthusing them for our cultural offer.
                     </p>
                 </div>
                 <div class="footer-content-divider animate-bottom">
@@ -120,20 +136,7 @@
                 </div>
             </div>
         </div>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-    <!--Load the API from the specified URL-->
-             <script async defer
-             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAT0Byrtp0glbs1ZXS77r5e91fkQibuFY&callback=initMap">
-             </script>
-
     </footer>
+
 </body>
 </html>

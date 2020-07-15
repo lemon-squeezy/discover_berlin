@@ -82,8 +82,8 @@ function initMap() {
 }
 // Handle a geolocation error
 function handleLocationError(browserHasGeolocation, infoWindow) {
-  // Set default location to Cambridge, United Kingdom
-  pos = { lat:51.509865, lng:-0.118092 };
+  // Set default location to Berlin, Germany
+  pos = { lat:52.520008, lng:13.404954 };
   map = new google.maps.Map(document.getElementById("map"), {
     center: pos,
     zoom: 15,
@@ -103,6 +103,9 @@ function handleLocationError(browserHasGeolocation, infoWindow) {
 document.getElementById("club").addEventListener("click", Club);
 document.getElementById("sport").addEventListener("click", Sport);
 document.getElementById("restaurant").addEventListener("click", Restaurant);
+document.getElementById("museum").addEventListener("click", Museum);
+document.getElementById("park").addEventListener("click", Park);
+document.getElementById("wellness").addEventListener("click", Wellness);
    
 function Club() {
  option('Club');
@@ -111,7 +114,16 @@ function Sport() {
   option('Gym');
 }
 function Restaurant() {
- option('restaurant');
+ option('Restaurant');
+}
+function Museum() {
+ option('Museum');
+}
+function Park() {
+ option('Park');
+}
+function Wellness() {
+ option('Wellness');
 }
 
 function option(keyWord){
@@ -183,13 +195,29 @@ function removeMarkers() {
 function showDetails(placeResult, marker, status) {
   if (status == google.maps.places.PlacesServiceStatus.OK) {
     let placeInfowindow = new google.maps.InfoWindow();
+    console.log(placeResult.photos)
     placeInfowindow.setContent(
       "<div><strong>" +
         placeResult.name +
         "</strong><br>" +
+        "Address: " +
+         "</div>"+
+        "<div>"+
+        placeResult.formatted_address +
+        "</div>"+
+        "<div>"+
+        "Website: " +
+        placeResult.website +
+        "</div>"+
+        "<div>"+ 
+        "Photos: " +
+        placeResult.photos[0]['html_attributions'][0] +
+        "</div>"+
+        "<div>"+
         "Rating: " +
         placeResult.rating +
         "</div>"
+        
     );
     placeInfowindow.open(marker.map, marker);
     currentInfoWindow.close();
@@ -203,14 +231,16 @@ function showDetails(placeResult, marker, status) {
 function showCard(placeResult) {
   let infoCard = document.getElementById("optionInfo");
   //if infoCard is open remove the open class.
-  if (infoCard.classList.contains("open")) {
-    infoCard.classList.remove("open");
-  }
+   if(infoCard != null){
+    if (infoCard.classList.contains("open")) {
+        infoCard.classList.remove("open");
+    }
 
-  //clearing previous details
-  while (infoCard.lastChild) {
-    infoCard.removeChild(infoCard.lastChild);
-  }
+    //clearing previous details
+    while (infoCard.lastChild) {
+        infoCard.removeChild(infoCard.lastChild);
+    }
+    }
 
   //Adding photo if there is one
   if (placeResult.photos) {
@@ -218,12 +248,16 @@ function showCard(placeResult) {
     photo = document.createElement("img");
     photo.classList.add("card-img-top");
     photo.src = firstPhoto.getUrl();
+    if(infoCard != null){
     infoCard.appendChild(photo);
+    }
   }
   //new div created for card body
   var newDiv = document.createElement("div");
   newDiv.classList.add("card-body");
+  if(infoCard != null){
   infoCard.appendChild(newDiv);
+  }
   let title = document.createElement("h5");
   title.classList.add("card-title");
   title.textContent = placeResult.name;
@@ -299,10 +333,11 @@ function showCard(placeResult) {
       }) +
       "</li>";
     contentStr = +"</ul>";
-    infoWindow.setContent(contentStr);
+    //infoWindow.setContent(contentStr);
     } else {
     var contentStr = "<h5>No Result, status=" + status + "</h5>";
   }
-
+  if(infoCard != null){
   infoCard.classList.add("open");
+  }
 }
