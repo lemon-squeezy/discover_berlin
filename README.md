@@ -6,7 +6,7 @@
 
 Discover Berlin is a website for English-speaking visitors who want to get closer to Berlin and its cultural offerings.
 
-![](assets/images/SC1.png)
+![](assets/images/SC1-small.png)
 
 ## User Experience
 The navigation bar is on top of the page and fixed. The menu items are easy to understand. The logo is clickable and will take you back to the landing. The Navbar contains four Items: "History", "Activities", "Contact" and "About us". In the "History" section, the user receives a detailed contribution to the history of Berlin. "Activities" tab will take the user to a google map above of it he can make interactive selections. The "Contact" tab leads to a contact form. And the "About us" Tab leads to the bottom of the active page. There is the footer with the "About us" area and the social icons.
