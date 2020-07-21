@@ -157,6 +157,7 @@ color: #F0D722;
     letter-spacing: 2px;
     margin-right: -2px;
     transition: color.7s;
+    text-shadow: 1px 1px 1px #000;
 }
 
 .nav-link:hover{
