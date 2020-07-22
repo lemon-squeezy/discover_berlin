@@ -6,7 +6,7 @@
 
 Discover Berlin is a website for English-speaking visitors who want to get closer to Berlin and its cultural offerings.
 
-![(assets/images/SC1.png)](assets/images/SC1.png)
+![(assets/images/SC1.jpg)](assets/images/SC1.jpg)
 
 ## UI/UX
 ### Project goals
@@ -63,6 +63,7 @@ An area should be added where the user can book a guided tour.
 * Github and Gitpod
 * Adobe Photoshop and Illustrator
 * Google Crome Developer Tools
+* Visual Studio Code
 
 ## Testing
 
@@ -85,3 +86,20 @@ Devices and browsers i used for testing:
 * [W3C HTML Validator](https://validator.w3.org/#validate_by_input) Passed tests without issues
 * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
 Passed tests without issues
+
+## Deployment
+This project was created with Visual Studio Code and Gitpod. 
+Visit this [repository link](https://github.com/lemon-squeezy/discover_berlin) and click on the Clone or Download button to copy the link provided.
+
+## Credits
+### Images
+* [Unsplash](https://unsplash.com/s/photos/berlin)
+* [Pixabay](https://pixabay.com/de/images/search/berlin/)
+### Text
+The text in the history section was copied from [Wikipedia](https://de.wikipedia.org/wiki/Berlin).
+
+## Disclaimer
+This project is for educational purposes only.
+
+## Acknowledgements
+Special thanks to my mentor - Rhey Ann Magcalas
