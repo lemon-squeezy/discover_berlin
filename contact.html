@@ -20,16 +20,6 @@
         emailjs.init("user_er5hxJX0ByESTEwem9LEi");
     })();
 	</script>
-	<script type="text/javascript">
-		window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                // generate the contact number value
-                this.contact_number.value = Math.random() * 100000 | 0;
-                emailjs.sendForm('contact_service', 'contact_form', this);
-            });
-        }
-	</script>
 </head>
 
 <body>
@@ -75,21 +65,15 @@
 	<section class="contact" id="contact">
 		<div class="container">
             <p class="description">If you still need personal advice or want to book a private tour, use the contact form.</p>
-			<form id="contact-form">
-
-				<div class="contact-input">
-					<input type="text" class="input" placeholder="Name" name="user_name" required>
-                    </div>
-					<div class="contact-input">
-						<input type="email" class="input" placeholder="E-mail" name="user_email" required>
-                    </div>
-						<div class="contact-input">
-							<textarea class="input" cols="30" rows="8" placeholder="Your message..." name="message"></textarea>
-						</div>
-
-						<input class="send" type="submit" value="Send">
+			<div class="center-form">
+                <form onsubmit="return sendMail(this);">
+                    <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
+                    <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email" required/>
+                    <textarea rows="5" name="request" class="form-control" id="request" placeholder="Request" required></textarea><br>  
+                    <button type="submit" onclick="ClearFields();" class="btn">Send Project Request</button>
                 </form>
-					</div>
+            </div>
+		</div>
 	</section>
 
 	<!-- Footer -->
@@ -136,6 +120,7 @@
 			</div>
 		</div>
 	</footer>
+    <script src="sendEmail.js"></script>
 </body>
 
 </html>
