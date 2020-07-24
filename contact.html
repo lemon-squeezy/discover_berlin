@@ -65,12 +65,12 @@
 	<section class="contact" id="contact">
 		<div class="container">
             <p class="description">If you still need personal advice or want to book a private tour, use the contact form.</p>
-			<div class="center-form">
-                <form onsubmit="return sendMail(this);">
+			<div class="contact-form">
+                <form>
                     <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
                     <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email" required/>
                     <textarea rows="5" name="request" class="form-control" id="request" placeholder="Request" required></textarea><br>  
-                    <button type="submit" onclick="ClearFields();" class="btn">Send Project Request</button>
+                    <input type="button" value="Submit" id="btnsubmit" onclick="submitForm(this)">
                 </form>
             </div>
 		</div>
@@ -87,7 +87,7 @@
 					<h4>About Discover Berlin</h4>
 					<div class="asterisk"><i class="fas fa-asterisk"></i></div>
 					<p>
-						D.B. was founded in 2017 with the aim of giving English-speaking visitors an insight into the
+						D.B. was founded in 2019 with the aim of giving English-speaking visitors an insight into the
 						city of Berlin and enthusing them for our cultural offer.
 					</p>
 				</div>
