@@ -67,7 +67,7 @@ header{
 .nav{
     height: 7.2rem;
     display: flex;
-    position: fixed;
+    position: fixed; 
     align-items: center;
     justify-content: center;
     margin-top: .7rem;
@@ -649,7 +649,7 @@ p.card-text{
 .rewiew h5, h6{
     color: #000;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 /* Contact section styles */
