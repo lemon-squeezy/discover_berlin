@@ -166,7 +166,7 @@ color: #F0D722;
 .hero{
     width: 100%;
     height: 100vh;
-    background: url("assets/images/hero.jpg") center no-repeat;
+    background: url("images/hero.jpg") center no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -186,7 +186,7 @@ color: #F0D722;
 .hero2{
     width: 100%;
     height: 100vh;
-    background: url("assets/images/hero2.jpg") center no-repeat;
+    background: url("images/hero2.jpg") center no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -207,7 +207,7 @@ color: #F0D722;
 .hero3{
     width: 100%;
     height: 100vh;
-    background: url("assets/images/skyline.jpg") center no-repeat;
+    background: url("images/skyline.jpg") center no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -635,9 +635,8 @@ p.card-text{
     background-color: var(--main-font-color-dark); 
 }
 .card-img-top{
-    width:60%;
-    max-height:20rem;
-    height: auto;
+     width:60%; 
+    height: 60%; 
     margin-left:25% !important;
 }
 
@@ -702,4 +701,10 @@ textarea#request{
 #btnsubmit:hover{
 background-color: var(--main-font-color-dark);
 color: var(--secondary-font-color)
+}
+
+#message{
+    padding: auto;
+    background-color: #F0D722;
+    font-size: 2rem;
 }

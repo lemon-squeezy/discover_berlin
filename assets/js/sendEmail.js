@@ -19,6 +19,13 @@ function sendMail(contactForm) {
 }
 
 function submitForm(button) {
-    sendMail(button.parentElement);
-    button.parentElement.reset();
+    var contactForm = button.parentElement;
+    if(contactForm.name.value.trim() != "" && contactForm.emailaddress.value.trim() != "" && 
+    contactForm.request.value.trim() != ""){
+        sendMail(button.parentElement);
+        button.parentElement.reset();
+        document.getElementById("message").style.display = "block";
+    }else{
+        document.getElementById("message").style.display = "none";
+    }  
 }

@@ -12,7 +12,7 @@
 	<!--Scroll reveal CDN-->
 	<script src="https://unpkg.com/scrollreveal"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="assets/style.css">
 	<link rel="icon" href="assets/images/favicon.ico.png" type="image/x-icon">
     <!-- Email Service implemented -->
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
@@ -67,11 +67,12 @@
 		<div class="container">
             <p class="description">If you still need personal advice or want to book a private tour, use the contact form.</p>
 			<div class="contact-form">
+                <div id="message" style="display:none">Message Successfully Sent</div>
                 <form>
                     <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
                     <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email" required/>
                     <textarea rows="5" name="request" class="form-control" id="request" placeholder="Request" required></textarea><br>  
-                    <input type="button" value="Submit" id="btnsubmit" onclick="submitForm(this)">
+                    <input type="submit" value="Submit" id="btnsubmit" onclick="submitForm(this)">
                 </form>
             </div>
 		</div>
@@ -121,8 +122,8 @@
 			</div>
 		</div>
 	</footer>
-    <script src="sendEmail.js"></script>
-    <script src="main.js"></script>
+    <script src="assets/js/sendEmail.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
