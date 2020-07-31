@@ -124,7 +124,6 @@ function createMarkers(places) {
       };
 
       /* Only fetch the details of a place when the user clicks on a marker.*/
-
       service.getDetails(request, function (placeResult, status) {
         showDetails(placeResult, marker, status);
       });
@@ -137,7 +136,7 @@ function createMarkers(places) {
   map.fitBounds(bounds);
 }
 
-// clear markers for a different cuisine
+// clear markers
 function removeMarkers() {
   for (var i = 0; i < markers.length; i++) {
     if (markers[i]) {
@@ -241,7 +240,7 @@ function showCard(placeResult) {
     newDiv.appendChild(websiteBut);
     } 
   
-  //Getting first 5 reviews reviews if there is one
+  //Getting first 5 reviews if there is one
   if (placeResult.reviews && placeResult.reviews.length) {
     let reviewDiv = document.createElement("div");
     //create a new div for reviews to added to card body
@@ -289,7 +288,6 @@ function showCard(placeResult) {
       }) +
       "</li>";
     contentStr = +"</ul>";
-    //infoWindow.setContent(contentStr);
     } else {
     var contentStr = "<h5>No Result, status=" + status + "</h5>";
   }

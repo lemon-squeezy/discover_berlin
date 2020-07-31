@@ -644,7 +644,7 @@ p.card-text{
 .review{    
     height:15rem;
     overflow: scroll;
-    
+    margin-right: 5rem;
 }
 .rewiew h5, h6{
     color: #000;
