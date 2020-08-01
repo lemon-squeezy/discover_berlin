@@ -590,6 +590,7 @@ footer{
     justify-content: center;
     background: #f0d723;
     background-size: cover;
+    max-height: 200 px;
 }
 .option .centered{
   position: absolute;
@@ -600,7 +601,7 @@ footer{
   text-shadow: 1px 1px 1px #000;
 }
 .img-thumbnail{
-    min-height: 320px;
+    min-height: 200px;
 }
 
 div .img-thumbnail:hover {

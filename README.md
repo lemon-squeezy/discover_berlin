@@ -66,7 +66,7 @@ An area should be added where the user can book a guided tour.
 * Visual Studio Code
 
 ## Testing
-
+![(assets/images/devices.jpg)](assets/images/devices.jpg)
 Devices and browsers i used for testing:
 * Iphone X 
     - Safari
