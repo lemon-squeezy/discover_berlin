@@ -5,10 +5,15 @@ const SelectElement = function (element) {
 
 let menuToggler = SelectElement('.menu-toggle');
 let body = SelectElement('body');
+//let aboutLink = SelectElement('#foot');
 
 menuToggler.addEventListener('click', function (){
     body.classList.toggle('open');
 });
+
+/* aboutLink.addEventListener('click', function (){
+    body.classList.toggle('open');
+});*/
 
 //Scroll reveal
 window.sr = ScrollReveal();

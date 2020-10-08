@@ -224,6 +224,26 @@ color: #F0D722;
     background-color: var(--dark-transparent);
      z-index: 1; 
 }
+.hero4{
+    width: 100%;
+    height: 100vh;
+    background: url("images/team.jpg") center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    z-index: 0;
+}
+.hero4::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    background-color: var(--dark-transparent);
+     z-index: 1; 
+}
 
 .sub-headline{
     font-size: 8.5rem;
@@ -317,7 +337,12 @@ color: #F0D722;
     text-transform: uppercase;
     margin-top: .5rem;
     letter-spacing: 3px;
+    transition: all .2s ease-in-out;
 }
+.headline-description h5:hover{
+    transform: scale(1.1);
+}
+
 .btn{
     display:inline-block;
     text-transform: uppercase;
@@ -414,6 +439,11 @@ footer{
 .social-icons i:hover,
 .social-icons i:focus{
     color: var(--secondary-font-color);
+}
+
+.copyright:hover{
+color: var(--secondary-font-color);
+cursor: default;
 }
 
 /* Media queries */
@@ -588,8 +618,10 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #f0d723;
     background-size: cover;
+}
+.option:hover{
+    background: #f0d723;
 }
 .option .centered{
   position: absolute;
@@ -601,6 +633,8 @@ footer{
 }
 .img-thumbnail{
     min-height: 320px;
+    width: auto;
+    background-size: 100% 100%;
 }
 
 div .img-thumbnail:hover {
@@ -707,4 +741,11 @@ color: var(--secondary-font-color)
     padding: auto;
     background-color: #F0D722;
     font-size: 2rem;
+}
+
+/* About section */
+
+.office{
+    width: 100%;
+    height: 450px;
 }

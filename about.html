@@ -13,18 +13,9 @@
 	<script src="https://unpkg.com/scrollreveal"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="assets/style.css">
-	<link rel="icon" href="assets/images/favicon.ico.png" type="image/x-icon">
-    <!-- Email Service implemented -->
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-    <!-- Initialize Email.js -->
-	<script type="text/javascript">
-		(function(){
-        emailjs.init("user_er5hxJX0ByESTEwem9LEi");
-    })();
-	</script>
+    <link rel="icon" href="assets/images/favicon.ico.png" type="image/x-icon">
 </head>
 <!-- NAVIGATION -->
-<body>
 	<header>
 		<div class="container">
 			<nav class="nav">
@@ -41,43 +32,41 @@
 							<a href="activities.html" class="nav-link">Activities</a>
 						</li>
 						<li class="nav-item">
-							<a href="contact.html" class="nav-link active">Contact</a>
+							<a href="contact.html" class="nav-link">Contact</a>
 						</li>
-						 <li class="nav-item">
-							<a href="about.html" class="nav-link">About us</a>
+                        <li class="nav-item">
+							<a href="about.html" class="nav-link active">About us</a>
 						</li>
 					</ul>
 			</nav>
+
 		</div>
 	</header>
+    
     <!-- Hero section -->
-	<section class="hero3" id="hero">
-		<div class="container">
-			<h2 class="sub-headline">
-				<span class="first-letter">C</span>ontact
-			</h2>
-			<a href="#contact">
-				<h1 class="headline">Let's get in touch!</h1>
-			</a>
-            
-		</div>
-	</section>
-	<!-- Contact section -->
-	<section class="contact" id="contact">
-		<div class="container">
-            <p class="description">If you still need personal advice or want to book a private tour, use the contact form.</p>
-			<div class="contact-form">
-                <div id="message" style="display:none">Message Successfully Sent</div>
-                <form>
-                    <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
-                    <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email" required/>
-                    <textarea rows="5" name="request" class="form-control" id="request" placeholder="Request" required></textarea><br>  
-                    <input type="submit" value="Submit" id="btnsubmit" onclick="submitForm(this)">
-                </form>
-            </div>
-		</div>
-	</section>
-
+    <section class="hero4" id="hero">
+        <div class="container">
+            <h2 class="sub-headline">
+                <span class="first-letter">A</span>bout us
+            </h2>
+            <h1 class="headline">Who we are</h1>
+        </div>
+    </section>
+    <!-- About us -->
+    <section class="history" id="history">
+        <div class="container">
+            <div class="about">
+               <div class="animate-top">
+                    <p>      
+Discover Berlin was founded in 2018 with the aim of giving English-speaking visitors an insight into the city of Berlin and enthusing them for our cultural offer.
+<br>Our team has grown over the years. When it was founded, there were three of us. Our company now has 22 employees. 
+<br>Use the contact form if you want to join our team. We will get back in touch with you.
+                    </p>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.1345861885643!2d13.4122482158079!3d52.53099907981625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e1d32e6fb2d%3A0xc09e63f7f775cde!2sStra%C3%9Fburger%20Str.%2042%2C%2010405%20Berlin!5e0!3m2!1sde!2sde!4v1602082311597!5m2!1sde!2sde" class= "office" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <p><br>We are located in the heart of Berlin. Have a look and visit us!</p>
+        </div>
+    </section>
 <!-- Footer -->
     <footer id="footer">
         <div class="container">
@@ -85,6 +74,7 @@
                 <a href="#hero"><i class="fas fa-chevron-up"></i></a>
             </div>
             <div class="footer-content">
+                
                 <div class="footer-content animate-bottom">
                     <div class="social-media">
                         <h4>Follow along</h4>
@@ -112,8 +102,6 @@
         </div>
     </footer>
     <!-- Footer -->
-    <script src="assets/js/sendEmail.js"></script>
-    <script src="assets/js/main.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
-
 </html>
