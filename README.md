@@ -14,7 +14,7 @@ Discover Berlin  is a milestone project for Code Institute User Centric Developm
 Above all, the user should get an overview of the activities on site.
 
 ### Structure
-The navigation bar is on top of the page and fixed. The menu items are easy to understand. The logo is clickable and will take you back to the landing. The Navbar contains four Items: "History", "Activities", "Contact" and "About us". In the "History" section, the user receives a detailed contribution to the history of Berlin. "Activities" tab will take the user to a google map above of it he can make interactive selections. With a click on the picture markers appear on the map. The "Contact" tab leads to a contact form. And the "About us" Tab leads to the bottom of the active page. There is the footer with the "About us" area and the social icons.
+The navigation bar is on top of the page and fixed. The menu items are easy to understand. The logo is clickable and will take you back to the landing. The Navbar contains four Items: "History", "Activities", "Contact" and "About us". In the "History" section, the user receives a detailed contribution to the history of Berlin. "Activities" tab will take the user to a google map above of it he can make interactive selections. With a click on the picture markers appear on the map. The "Contact" tab leads to a contact form. And the "About us" Tab leads to the about us page. Every site contains a footer with the social icons.
 
 ## Design
 ### Colors
